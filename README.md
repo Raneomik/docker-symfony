@@ -121,6 +121,31 @@ If you want to use this docker configuration to run multiple Symfony application
 127.0.0.1   localhost symfony.sf project1.sf project2.sf project3.sf
 ```
 
+* or, better setup a [wildcard DNS domain](http://asciithoughts.com/posts/2014/02/23/setting-up-a-wildcard-dns-domain-on-mac-os-x/) (Mac OS X) with Dnsmasq :
+
+```bash
+brew install dnsmasq
+# This forces the .sf domain to respond with 127.0.0.1
+echo "address=/.sf/127.0.0.1" > /usr/local/etc/dnsmasq.conf
+# Install the daemon startup file
+sudo cp -fv /usr/local/opt/dnsmasq/*.plist \
+  /Library/LaunchDaemons
+# Start the daemon
+sudo launchctl load \
+  /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+# man 5 resolver
+sudo mkdir -p /etc/resolver
+sudo sh -c 'echo "nameserver 127.0.0.1" > /etc/resolver/sf'
+```
+
+now ping yourdomain.sf :
+
+```bash
+ping yourdomain.sf
+PING yourdomain.sf (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.022 ms
+```
+
 * mount the volumes into docker-compose.yml
 
 ```bash
