@@ -285,9 +285,11 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -q)
 ```
 
-## concise commandline monitoring for containers
+## Concise commandline monitoring for containers
 
 Container monitoring with [ctop](http://ctop.sh/) (OS X : brew install ctop).
+
+![](docker_mediafigaro_symfony.jpg)
 
 ## Commits
 
@@ -305,7 +307,7 @@ Run `docker-compose up -d` instead.
 
 * Permission problem? See [this doc (Setting up Permission)](http://symfony.com/doc/current/book/installation.html#checking-symfony-application-configuration-and-setup)
 
-* [PHP7-FPM Docker image](https://hub.docker.com/u/mediafigaro/)
+* [PHP7-FPM Docker image](https://hub.docker.com/u/mediafigaro/) MEDIA.figaro Docker Hub
 
 * If port 80 is already in use, especially on a MAC, you should stop apache :
 ```bash
