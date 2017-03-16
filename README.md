@@ -285,6 +285,10 @@ docker rm $(docker ps -aq)
 docker rmi $(docker images -q)
 ```
 
+## concise commandline monitoring for containers
+
+Container monitoring with [ctop](http://ctop.sh/) (OS X : brew install ctop).
+
 ## Commits
 
 If you need to display the latest Git commits into the Symfony debug bar and link them to your code repository you can use this [bundle](https://github.com/kendrick-k/symfony-debug-toolbar-git).
