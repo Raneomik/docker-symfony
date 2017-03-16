@@ -203,7 +203,7 @@ result :
 },
 ```
 
-Urls for CouchDB : [localhost:8082](http://localhost:8080), [localhost:8082/_utils/](http://localhost:8080/_utils/), [localhost:8082/_utils/fauxton/](http://localhost:8080/_utils/fauxton/)
+Urls for CouchDB : [localhost:8082](http://localhost:8082), [localhost:8082/_utils/](http://localhost:8082/_utils/), [localhost:8082/_utils/fauxton/](http://localhost:8082/_utils/fauxton/)
 
 You can use [Kinematic](https://kitematic.com/) UI for Docker.
 
