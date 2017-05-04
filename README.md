@@ -212,8 +212,15 @@ You can use [Kinematic](https://kitematic.com/) UI for Docker.
 Into ~/.bash_profile :
 
 ```bash
-function dke { docker exec -it $1 bash } # dki e2dac6620ad3
-function dki { docker inspect $1 } # dki e2dac6620ad3
+
+# dki e2dac6620ad3
+function dke {
+    docker exec -it $1 bash
+}
+# dke e2dac6620ad3
+function dki {
+    docker inspect $1
+}
 alias dk='docker-compose build && docker-compose up -d'
 alias dkup='docker-compose up -d'
 alias dkbuild='docker-compose build'
